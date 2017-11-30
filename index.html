@@ -1,480 +1,190 @@
 <!DOCTYPE html>
-<html class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>主页</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- CSS
-        ================================================ -->
-        <!-- Owl Carousel -->
-		<link rel="stylesheet" href="css/owl.carousel.css">
-        <!-- bootstrap.min css -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Font-awesome.min css -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/animate.min.css">
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>潭州学院前端事业集群-WEB事业部案例库</title>
+<link type="text/css" rel="stylesheet" href="css/tz.css"></link>
+<link type="text/css" rel="stylesheet" href="css/case.css"></link>
+</head>
+<body>
+<script src="js/three.min.js"></script>
+<script src="js/tween.min.js"></script>
+<script src="js/TrackballControls.js"></script>
+<script src="js/CSS3DRenderer.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
 
-		<link rel="stylesheet" href="css/main.css">
-        <!-- Responsive Stylesheet -->
-		<link rel="stylesheet" href="css/responsive.css">
-		<!-- Js -->
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/jquery.nav.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
-	</head>
-	<body>
-	<!--
-	头部图片开始 
-	============================== -->
-    <section id="hero-area">
-      <img class="img-responsive" src="images/header.jpg" alt="">
-    </section>
-	<!--
-    头部开始 
-	============================== -->
-	<nav id="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <nav class="navbar navbar-default">
-                          <div class="container-fluid">
-                            <!-- 折叠收缩 -->
-                            <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">导航折叠</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                              </button>
-                              <a class="navbar-brand" href="#">
-                                <span class="">logo</span>
-                              </a>
-                            </div>
+<table id="pager">
+	<tr>
+		<td valign="top">
+			<div id="container"></div>
+				<div id="menu" class="magictime puffIn">
+					<button id="table">Table</button>
+					<button id="sphere">Sphere</button>
+					<button id="helix">Helix</button>
+					<button id="grid">Grid</button>
+				</div>
+			</div>
+		</td>
+		<td valign="top">
+			<div id="frame">
+				<iframe id="iframe" frameborder="0"></iframe>
+				<div id="menu" class="magictime puffIn">
+					<button id="back">Back</button>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+<div id="detail" class="magictime puffIn" style="display:none">
+	<div class="head">
+		<h1></h1>
+	</div>
+	<div class="body">
+		<table>
+			<tr>
+				<td width="60%" valign="top">
+					<span class="img"></span>	
+				</td>
+				<td width="40%" valign="middle">
+						<p />
+						<h1 />
+				</td>	
+			</tr>	
+		</table>
+	</div>
+</div>
+<script>
 
-                            <!-- 导航折叠部分 -->
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                              <ul class="nav navbar-nav navbar-right" id="top-nav">
-                                <li><a href="#hero-area">主页</a></li>
-                                <li><a href="#about-us">关于我们</a></li>
-                                <li><a href="#blog">博客</a></li>
-                                <li><a href="#price">菜单</a></li>
-                                <li><a href="#subscribe">消息</a></li>
-                                <li><a href="#contact-us">联系方式</a></li>
-                              </ul>
-                            </div><!-- /.navbar-collapse -->
-                          </div><!-- /.container-fluid -->
-                        </nav>
-                    </div>
-                </div><!-- .col-md-12 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .container 结束 -->
-	</nav><!-- 头部结束 -->
-    <!--
-    侧边栏开始
-    ============================== -->
-    <section id="slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <div class="title">
-                            <h3>精品 <span>菜式</span></h3>
-                        </div>
-                        <div id="owl-example" class="owl-carousel">
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
-                            </div>
-                            <div>
-                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div><!-- .col-md-12 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .container 结束 -->
-    </section><!-- slider 结束 -->
-    <!--
-    关于我们开始
-    ============================== -->
-    <section id="about-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="images/cooker-img.png" alt="cooker-img">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" > 大白鲨<span>餐厅</span> </br> 精选 <span>菜品</span>
-                        </h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-                        	爽滑酥嫩 肉汁四溢 口感饱满 回味悠长 软嫩滑爽 入口即溶 酥脆香口
-							玉盘珍馐 秀色可餐 饕餮大餐 凤髓龙肝 回味无穷 唇齿留香 色味俱佳 垂涎欲滴 八珍玉食 其味无穷
-							近看，白白嫩嫩的小笼汤包饱满，润泽，嗯，看起来就很好吃。瞧，那皮儿是多么的娇嫩呀，娇嫩得就好像胖娃娃肥嘟嘟的小脸蛋儿，轻轻一捏就破碎了。透过外皮儿，你能清清楚楚地看到里面那纯美的汤汁儿.
-							烧卖里碧绿的颜色，透出蒸熟后薄如纸的面皮，犹如翡翠一般。轻轻地咬上一口，皮一点便破，吃到里面由虾仁、韭菜和鸡蛋制成菜茸，爽口清润。吃下去后嘴里还充满虾仁的香味，真可谓齿颊留香。
-                       		</br></br>
-                        </p>
-                    </div>
-                </div><!-- .col-md-12 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .containe 结束 -->
-    </section><!-- #call-to-action 结束 -->
-    <!--
-    博客开始
-    ============================ -->
-    <section id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class="heading">最新 <span></span><span>菜式</span></h1>
-                        <ul>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="300ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-1.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>鸡肉饭</h3>
-                                    <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-2.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>水果沙拉</h3>
-                                    <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
-                                <div class="content-left">
-                                    <h3>红酒牛排</h3>
-                                    <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-3.jpg" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
-                                <div class="content-left">
-                                    <h3>红酒牛排</h3>
-                                    <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                </div>
-                                <div class="blog-img-2">
-                                    <img src="images/blog/blog-img-4.jpg" alt="blog-img">
-                                </div>
-                            </li>
-                            <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="700ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-5.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>甜蜜水果松饼</h3>
-                                    <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                <div class="blog-img">
-                                    <img src="images/blog/blog-img-6.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>蔬菜沙拉</h3>
-                                    <p>
-                                    	这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙...
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="btn btn-default btn-more-info wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">更多</a>
-                    </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
-    </section><!-- #blog close -->
-    
-    <!--
-    price start
-    ============================ -->
-    <section id="price">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> <span>我们</span>的  <span>价格</span></h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙...</p>
-                        <div class="pricing-list">
-                            <div class="title">
-                                <h3>本周精品<span>推荐</span> </h3>
-                            </div>
-                            <ul>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>红烧牛肉</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>￥  25.00</span>
-                                        </div>
-                                        <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    		搭配的时蔬使整个味道结合的相当的美妙... 
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>水果沙拉</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>￥  10.00</span>
-                                        </div>
-                                        <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙... 
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>饮品 </h2>
-                                            <div class="border-bottom"></div>
-                                            <span>￥ 5.00</span>
-                                        </div>
-                                        <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙...  </p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>红酒牛排</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>￥  15.00</span>
-                                        </div>
-                                        <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                    </div>
-                               </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="700ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>鸡腿汉堡</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>￥ 75.00</span>
-                                        </div>
-                                        <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                    <div class="item">
-                                        <div class="item-title">
-                                            <h2>薯条</h2>
-                                            <div class="border-bottom"></div>
-                                            <span>￥ 7.00</span>
-                                        </div>
-                                        <p>这是一道用红酒入菜，风味十足的红酒牛排，色泽红润.鲜美无比.吃起来有肥厚的满足感.
-                                    	搭配的时蔬使整个味道结合的相当的美妙...</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a class="btn btn-default pull-right wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">更多</a>
-                        </div>
-                    </div>
-                </div><!-- .col-md-12 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .containe 结束 -->
-    </section><!-- #price 结束 -->
-    <!--
-    推送开始
-    ============================ -->
-    <section id="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> 关注 <span>我们</span></h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">订阅最新消息..我们会持续为你推送我们新品优惠 </p>
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="输入你的邮箱地址...">
-                                    <div class="input-group-addon">
-                                        <button class="btn btn-default" type="submit">确认</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div><!-- .col-md-12 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .containe 结束 -->
-    </section><!-- #subscribe 结束 -->
-    <!--
-    联系我们开始
-    ============================= -->
-    <section id="contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms"><span>联系我们</span></h1>
-                        <h3 class="title wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">通过<span>邮件</span> 发送</h3>
-                        <form>
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="输入名字...">
-                            </div>
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="800ms">
-                                <input type="text" class="form-control" placeholder="输入地址...">
-                            </div>
-                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1000ms">
-                                <textarea class="form-control" rows="3" placeholder="输入消息..."></textarea>
-                            </div>
-                        </form>
-                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button">发送消息</a>
-                    </div>
-                </div><!-- .col-md-12 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .container 结束 -->
-    </section><!-- #contact-us 结束 -->
-    <!--
-    footer开始
-    ============================= -->
-    <section id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="block wow fadeInLeft"  data-wow-delay="200ms">
-                        <h3>联系 <span>我们</span></h3>
-                        <div class="info">
-                            <ul>
-                                <li>
-                                  <h4><i class="fa fa-phone"></i>电话</h4>
-                                  <p>(000) 123 456 78- (000) 123 4567 89</p>
-                                    
-                                </li>
-                                <li>
-                                  <h4><i class="fa fa-map-marker"></i>地址</h4>
-                                  <p>辽宁大连.......</p>
-                                </li>
-                                <li>
-                                  <h4><i class="fa fa-envelope"></i>email</h4>
-                                  <p>wkh_bai@163.com</p>
-                                  
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- .col-md-4 close -->
-                <div class="col-md-4">
-                    <div class="block wow fadeInLeft"  data-wow-delay="700ms">
-                        <h3>最新 <span>消息</span></h3>
-                        <div class="blog">
-                            <ul>
-                                <li>
-                                    <h4><a href="#">2015.11.1</a></h4>
-                                    <p>优惠消息....................................</p>
-                                </li>
-                                <li>
-                                    <h4><a href="#">2015-11.11</a></h4>
-                                    <p>优惠消息/.....................................</p>
-                                </li>
-                            </ul>                
-                        </div>
-                    </div>
-                </div>
-                <!-- .col-md-4 结束 -->
-                <div class="col-md-4">
-                    <div class="block wow fadeInLeft"  data-wow-delay="1100ms">
-                        <div class="gallary">
-                            <h3>照片 <span>墙</span></h3>
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="images/photo/photo-1.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="images/photo/photo-2.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="images/photo/photo-3.jpg" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="images/photo/photo-4.jpg" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="social-media-link">
-                            <h3><span>分享</span></h3>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-dribbble"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-behance"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- .col-md-4 结束 -->
-            </div><!-- .row 结束 -->
-        </div><!-- .containe 结束 -->
-    </section><!-- #footer 结束 -->
-    <!--
-    footer-bottom开始
-    ============================= -->
-    <footer id="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="block">
-                        <p>友情链接</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-	</body>
+/*
+	H|H5|Js|Css|Cs3
+*/
+var table = [
+	"H", "Star", "2015.03.19", 1, 1,{root:'case/360Game/',title:'360抽奖游戏',author:'Star',desc:'html+javacript实现360抽奖游戏【360内部技术】'},
+	"Css", "Star", "2015.03.10", 3, 1,{root:'case/360Barrage/',title:'360弹幕游戏',author:'Star',desc:'html+javacript+jQuery实现360弹幕交互小游戏【360内部技术】'},
+	"Cs3", "Star", "2015.03.01", 1, 2,{root:'case/qqPhoto/',title:'比QQ相册更炫酷的效果',author:'Star',desc:'html5+jQuery实现比QQ相册更炫酷的相册交互效果【腾讯内部技术】'},
+	"H5", "Star", "2015.02.11", 2, 2,{root:'case/qqChange/',title:'大数据删选插件',author:'Star',desc:'div+css3+jQuery实现大数据删选效果选项【腾讯内部技术】'},
+	"H5", "Star", "2015.01.20", 13, 2,{root:'case/timeline/',title:'时间抽数据加载',author:'Star',desc:'div+css3+jQuery实现时间抽懒加载特效【腾讯内部技术】'},
+	"Cs3", "芝士", "2014.09.26", 14, 2,{root:'case/css3opendoor1/',title:'潭州开门【推门】',author:'芝士',desc:'div+css3技术实现商城开门红效果【推门】'},
+	"H5", "芝士", "2015.03.23", 15, 2,{root:'case/Image&Text/',title:'清新亮丽的图文展示效果',author:'芝士',desc:'div+css3技术实现太平洋时尚美容栏目的图文动态展示效果'},
+	"Cs3", "芝士", "2015.03.23", 16, 2,{root:'case/m4/',title:'小米商城米4震撼登场',author:'芝士',desc:'div+css3技术实现小米商城米4震撼登场效果'},
+	"H5", "芝士", "2015.03.23", 17, 2,{root:'case/face/',title:'html5人脸',author:'芝士',desc:'html5+js+flash技术人脸不同终端的展示'},
+	"H5", "芝士", "2015.03.23", 18, 2,{root:'case/Letter/',title:'html5实现立体效果',author:'芝士',desc:'html5+css3技术实现26个字母的立体阴影翻动效果,屌炸天哦'},
+	"Js", "芝士", "2015.03.23", 1, 3,{root:'case/time/',title:'html5+js带着你做出windows的时钟效果',author:'芝士',desc:'html5+js带着你做出windows的时钟效果,永远的经典呀!'},
+	"Cs3", "芝士", "2015.03.23", 2, 3,{root:'case/jd/',title:'div+css3解密京东核心产品特效',author:'芝士',desc:'div+css3解密京东核心产品特效'},
+	"Js", "芝士", "2015.03.23", 13, 3,{root:'case/html5-videoplayer/',title:'html5+js实现震撼影院播放效果',author:'芝士',desc:'html5+js实现震撼影院播放效果,大感官时代来临!'},
+	"Cs3", "芝士", "2015.03.23", 14, 3,{root:'case/photograph/',title:'html5+js实现网页拍照功能',author:'芝士',desc:'html5+js实现网页拍照功能!'},
+	"Js", "芝士", "2015.03.23", 15, 3,{root:'case/html5webgqHTML5/',title:'js+html5实现网页电子琴',author:'芝士',desc:'html5+js实现网页电子琴小游戏!'},
+	"Cs3", "芝士", "2015.03.23", 16, 3,{root:'case/nav/',title:'div+css3剖析京东滑动导航栏',author:'芝士',desc:'div+css3剖析京东滑动导航栏'},
+	"Cs3", "芝士", "2015.03.23", 17, 3,{root:'case/vivo/',title:'div+css3剖析vivo手机薄动心弦效果',author:'芝士',desc:'div+css3剖析vivo手机薄动心弦效果'},
+	"Cs3", "芝士", "2015.03.23", 18, 3,{root:'case/pro-3Dfont/',title:'div+css3创意3D翻转图文展示架构',author:'芝士',desc:'div+css3创意3D翻转图文展示架构'},
+	"Cs3", "芝士", "2015.03.23", 1, 4,{root:'case/lehuodoor/',title:'div+css3创意开关门图文展示架构',author:'芝士',desc:'div+css3创意3D翻转开关门展示架构'},
+	"Cs3", "芝士", "2015.03.23", 2, 4,{root:'case/hotel/',title:'js+css3温泉假日酒店',author:'芝士',desc:'js+css3温泉假日酒店'},
+	"Cs3", "芝士", "2015.03.23", 3, 4,{root:'case/css3curtain/',title:'div+css3商城开门特效制作',author:'芝士',desc:'div+css3商城开门特效制作'},
+	"Js", "零曦", "2015.01.12", 4, 4,{root:'case/suningyi_Purchase/',title:'苏宁易购之运动会',author:'零曦',desc:'纯纯的css3+JQ实现苏宁易购之运动会'},
+	"Cs3", "零曦", "2015.01.23", 5, 4,{root:'case/shop_Page/',title:'淘宝内页产品旋转动画',author:'零曦',desc:'纯纯的css3实现淘宝内页产品旋转动画'},
+	"Cs3", "零曦", "2015.01.24", 6, 4,{root:'case/timing_Banner2/',title:'定时banner动画',author:'零曦',desc:'纯纯的css3实现定时banner动画'},
+	"Cs3", "零曦", "2015.01.25", 7, 4,{root:'case/sudoku_Animation/',title:'九宫格动画',author:'零曦',desc:'纯纯的css3实现九宫格动画'},
+	"Cs3", "零曦", "2015.01.02", 8, 4,{root:'case/accordion/',title:'css3手风琴动画',author:'零曦',desc:'纯纯的css3实现手风琴动画'},
+	"Cs3", "零曦", "2015.01.03", 9, 4,{root:'case/broadcast/',title:'不一样的动画发布音乐MV首播',author:'零曦',desc:'纯纯的css3实现不一样的动画，完爆动画'},
+	"Cs3", "零曦", "2015.01.05", 10, 4,{root:'case/CSS3zoom/',title:'css3放大缩小动画',author:'零曦',desc:'纯纯的css3实现元素的放大和缩小'},
+	"Cs3", "零曦", "2015.01.08", 11, 4,{root:'case/waterfall_Flow/',title:'CSS3瀑布流',author:'零曦',desc:'css3打造响应式瀑布流'},
+	"Cs3", "零曦", "2015.02.02", 12, 4,{root:'case/css3rotation/',title:'css3旋转效果',author:'零曦',desc:'纯纯的css3实现旋转效果动画'},
+	"Cs3", "零曦", "2015.02.04", 13, 4,{root:'case/accordion2/',title:'css3手风琴动画',author:'零曦',desc:'纯纯的css3实现手风琴动画'},
+	"Cs3", "零曦", "2015.02.06", 14, 4,{root:'case/nav/',title:'树形导航',author:'零曦',desc:'纯纯的css3实现树形导航动画'},
+	"Cs3", "零曦", "2015.02.08", 15, 4,{root:'case/navigation/',title:'树形导航',author:'零曦',desc:'纯纯的css3实现树形导航动画'},
+	"Cs3", "零曦", "2015.02.10", 16, 4,{root:'case/Response/',title:'响应式网站',author:'零曦',desc:'纯纯的css3实现响应式网站导航'},
+	"H5", "零曦", "2015.03.01", 17, 4,{root:'case/music/',title:'HTML5音乐播放器',author:'零曦',desc:'HTML5视频音频标签打造播放器'},
+	"Js", "零曦", "2015.03.02", 18, 4,{root:'case/banner_Switch/',title:'CSS3+JQ实现banner切换',author:'零曦',desc:'纯纯的css3+纯纯的JQ实现banner切换'},
+	"Js", "零曦", "2015.03.04", 1, 5,{root:'case/Random/',title:'随机动画',author:'零曦',desc:'纯纯的css3+JQ实现随机动画'},
+	"Cs3", "零曦", "2015.03.06", 2, 5,{root:'case/Seamless_Rolling/',title:'无缝滚动动画',author:'零曦',desc:'纯纯的css3实现无缝滚动动画'},
+	"H5", "零曦", "2015.03.08", 3, 5,{root:'case/svg/',title:'svg动画',author:'零曦',desc:'纯纯的css3实现svg矢量图动画'},
+	"Js", "零曦", "2015.03.10", 4, 5,{root:'case/switching_LR/',title:'左右切换',author:'零曦',desc:'JQ实现左右切换'},
+	"Cs3", "零曦", "2015.03.12", 5, 5,{root:'case/timing_Banner/',title:'定时banner动画',author:'零曦',desc:'纯纯的css3实现定时banner动画'},
+	"Cs3","零曦", "2015.03.14", 6, 5,{root:'case/3D/',title:'3D动画',author:'零曦',desc:'纯纯的css3实现3D动画'},
+	"H5", "零曦", "2015.03.16", 7, 5,{root:'case/delayering/',title:'扁平化登陆页面',author:'零曦',desc:'一定互联网最新的扁平化带你登陆'},
+	"H5", "零曦", "2015.03.18", 8, 5,{root:'case/form/',title:'表单',author:'零曦',desc:'纯纯的css3实现3D立体表单'},
+	"Js", "零曦", "2015.03.20", 9, 5,{root:'case/flash_Animation/',title:'仿Flash时间差动画',author:'零曦',desc:'jq仿Flash时间差动画'},
+	"Js", "零曦", "2015.01.20", 10, 5,{root:'case/image_Upload/',title:'仿QQ空间图片上传',author:'零曦',desc:'仿QQ空间图片上传'},
+	"Cs3", "零曦", "2015.01.22", 11, 5,{root:'case/timing_Banner2/',title:'无缝滚动动画',author:'零曦',desc:'纯纯的css3实现无缝滚动动画'},
+	"Cs3", "阿飞", "2015.3.20", 12, 5,{root:"case/css3randon-animation/",title:'css3随机动画',author:'阿飞',desc:'潭州web官网效果，jquery+css3实现三种动画效果随机执行'},
+	"Cs3", "阿飞", "2015.1.20", 13, 5,{root:'case/rotating-cube/',title:'3D旋转立方体',author:'阿飞',desc:'css3+js实现3D旋转轮播图，并能实现自定义轮播个数'},
+	"Js", "阿飞", "2015.1.1", 14, 5,{root:'case/fixed-nav/',title:'顶部悬浮导航',author:'阿飞',desc:'大型互联网技术--常见实用的顶部悬浮导航'},
+	"Js", "阿飞", "2015.2.10", 15, 5,{root:'case/taobao-banner/',title:'淘宝网banner图',author:'阿飞',desc:'大型商城通用的轮播图技术，jq+html实现无缝轮播'},
+	"H5", "阿飞", "2015.2.3", 16, 5,{root:'case/iosAlbum/',title:'苹果相册展示台',author:'阿飞',desc:'css3+jq实现图片3D展示台效果'},
+	"Js", "阿飞", "2015.2.6", 17, 5,{root:'case/ke.qq-banner/',title:'腾讯课堂图片展示区',author:'阿飞',desc:'大型互联网公司技术--淡入横幅banner图效果'},
+	"Cs3", "阿飞", "2015.2.17", 18, 5,{root:'case/gradient-nav/',title:'渐变下拉导航',author:'阿飞',desc:'简单实用型，css3渐变下拉二级导航'},
+	"H", "阿飞", "2014.11.21", 1, 6,{root:'case/360huanji/',title:'360换机单页',author:'阿飞',desc:'360换机完整单页的制作，滚动js+动态移动导航'},
+	"Js", "阿飞", "2014.10.2", 2, 6,{root:'case/360movise/',title:'360影视单页',author:'阿飞',desc:'360影视完整单页的制作，css3动画实现背景的连续无线滚动'},
+	"Cs3", "阿飞", "2014.9.5", 4, 9,{root:'case/pro/',title:'产品介绍页',author:'阿飞',desc:'原影视精选导航，稍改变样式可按照自己所需样式进行改变'},
+	"H", "阿飞", "2015.1.31", 5, 9,{root:'case/slide-pro/',title:'抽屉式导航',author:'阿飞',desc:'手风琴、抽屉式导航、滑动效果'},
+	"Js", "阿飞", "2015.1.20", 6, 9,{root:'case/jd-banner/',title:'京东图片轮播',author:'阿飞',desc:'大型商城站实用轮播技术，兼容各大浏览器'},
+	"Js", "阿飞", "2014.12.30", 7, 9,{root:'case/mop-banner/',title:'猫扑首页图片轮播',author:'阿飞',desc:'猫扑官网小图片banner区，精致美观实用'},
+	"H", "阿飞", "2015.1.2", 8, 9,{root:'case/meizu/',title:'魅族官网',author:'阿飞',desc:'完整版魅族官网--vip小型项目练手项目'},
+	"Js", "阿飞", "2014.12.29", 9, 9,{root:'case/meizu-bg/',title:'魅族官网-大背景切换',author:'阿飞',desc:'魅族官网上部分大背景切换区'},
+	"Js", "阿飞", "2014.12.29", 10, 9,{root:'case/meizu-nav/',title:'魅族官网-大背景切换-顶部导航',author:'阿飞',desc:'魅族官网上部导航区'},
+	"H", "阿飞", "2014.8.8", 11, 9,{root:'case/Gamepage/',title:'手游单页的制作',author:'阿飞',desc:'网站单页的制作，div+css布局'},
+	"Js", "阿飞", "2015.1.23", 12, 9,{root:'case/mi/',title:'小米首页导航+轮播',author:'阿飞',desc:'小米官网导航区+banner区'},
+	"H", "阿飞", "2015.6.29", 13, 9,{root:'case/360pic/',title:'360图集',author:'阿飞',desc:'360图集效果-鼠标移动上去文字显示效果'},
+	"H5", "阿飞", "2014.6.20", 14, 9,{root:'case/fireworks/',title:'烟花',author:'阿飞',desc:'html5酷炫效果--烟花绽放'},
+	"Css", "阿飞", "2014.10.4", 15, 9,{root:'case/mop-nav/',title:'猫扑顶部导航',author:'阿飞',desc:'mop官网顶部固定导航（包含网站广告条的制作）'},
+	"Css", "阿飞", "2014.8.1", 16, 9,{root:'case/txt-pic/',title:'经典图文布局',author:'阿飞',desc:'图片与文字的简单布局'},
+	"H", "黄河老师", "2015.3.21", 1, 7,{root:'case/weirenwu/',title:'百度微任务单页开发',author:'黄河老师',desc:'html+jquery实现完整单页开发【百度内部最新技术】'},
+	"Js", "黄河老师", "2015.3.19", 2, 1,{root:'case/oppo/',title:'oppo官网进度条特效首页切换',author:'黄河老师',desc:'html+jquery实现首页进度条特效切换效果'},
+	"Js", "黄河老师", "2015.3.17", 3, 2,{root:'case/samsung/',title:'高级jquery智能幻灯片效果',author:'黄河老师',desc:'html+jquery打造三星官网首页智能幻灯片切换效果'},
+	"H", "黄河老师", "2013.3.15", 17, 9,{root:'case/tuniu/',title:'途牛网首页景点导航',author:'黄河老师',desc:'html+jquery实现途牛网首页景点导航效果'},
+	"H", "黄河老师", "2015.3.13", 18, 9,{root:'case/rili/',title:'hao123日历首页定时轮播滑动切换',author:'黄河老师',desc:'html+jquery实现hao123日历首页定时轮播滑动切换特效'},
+	"H", "黄河老师", "2015.3.11", 4, 6,{root:'case/21Cake/',title:'21Cake官网制作',author:'黄河老师',desc:'html+css实现21Cake官网制作'},
+	"H", "黄河老师", "2015.3.9", 5, 6,{root:'case/hunantv/',title:'芒果TV视频点播器',author:'黄河老师',desc:'html+jquery实现芒果TV视频点播器'},
+	"H", "黄河老师", "2015.3.7", 6, 6,{root:'case/baiduhf/',title:'百度换肤特效',author:'黄河老师',desc:'html+jquery【百度内部技术】实现百度换肤特效'},
+	"Js", "黄河老师", "2015.3.5", 7, 6,{root:'case/1688/',title:'阿里巴巴--高级图片动画效果',author:'黄河老师',desc:'html+jquery【阿里巴巴内部技术高级jq图片动画效果】'},
+	"H", "黄河老师", "2015.3.3", 8, 6,{root:'case/banner/',title:'大型企业网站--首页banner切换效果',author:'黄河老师',desc:'html+jquery实现大型企业网站banner切换效果'},
+	"Js", "黄河老师", "2015.3.1", 9, 6,{root:'case/qzgg/',title:'群组广告定时轮播器',author:'黄河老师',desc:'html+jquery实现群组广告定时轮播器'},
+	"H", "黄河老师", "2015.2.28", 10, 6,{root:'case/baidutm/',title:'百度首页透明滑动导航',author:'黄河老师',desc:'html+css实现百度首页透明上下滑动导航'},
+	"Js", "黄河老师", "2015.2.26", 11, 6,{root:'case/djs/',title:'倒计时开发',author:'黄河老师',desc:'html+jquery实现倒计时开发'},
+	"H", "黄河老师", "2015.2.23", 12, 6,{root:'case/star/',title:'明星star',author:'黄河老师',desc:'html+jquery明星star特效'},
+	"H", "黄河老师", "2015.2.21", 13, 6,{root:'case/sds/',title:'水滴式导航特效',author:'黄河老师',desc:'html+jquery水滴式导航特效'},
+	"Js", "黄河老师", "2015.2.23", 14, 6,{root:'case/meinv/',title:'美女来找茬游戏开发',author:'黄河老师',desc:'html+jquery实现美女来找茬游戏开发'},
+	"Cs3", "黄河老师", "2015.2.21", 15, 6,{root:'case/fc/',title:'风车特效广告轮播',author:'黄河老师',desc:'风车特效广告轮播'},
+	"H", "黄河老师", "2015.2.19", 16, 6,{root:'case/xc/',title:'携程网单页制作',author:'黄河老师',desc:'div+css实现携程网单页制作'},
+	"Js", "黄河老师", "2015.2.17", 17, 6,{root:'case/snow/',title:'浪漫圣诞节下雪效果',author:'黄河老师',desc:'html+jquery实现浪漫圣诞节下雪效果'},
+	"H", "黄河老师", "2015.2.15", 18, 6,{root:'case/baidudwy/',title:'百度动物园视频点播',author:'黄河老师',desc:'html+jquery百度动物园视频点播'},
+	"CS3", "Radium", "(226)", 2, 7,{root:'case/accordion/',title:'css3手风琴动画',author:'零曦',desc:'纯纯的css3实现手风琴动画'},
+	"CS3", "Actinium", "(227)", 4, 10,{root:'case/broadcast/',title:'不一样的动画发布音乐MV首播',author:'零曦',desc:'纯纯的css3实现不一样的动画，完爆动画'},
+	"CS3", "Thorium", "232.03806", 5, 10,{root:'case/CSS3zoom/',title:'css3放大缩小动画',author:'零曦',desc:'纯纯的css3实现元素的放大和缩小'},
+	"CS3", "Protactinium", "231.0588", 6, 10,{root:'case/waterfall_Flow/',title:'CSS3瀑布流',author:'零曦',desc:'css3打造响应式瀑布流'},
+	"CS3", "Uranium", "238.02891", 7, 10,{root:'case/css3rotation/',title:'css3旋转效果',author:'零曦',desc:'纯纯的css3实现旋转效果动画'},
+	"Js", "彩虹", "2015.03.01", 8, 10,{root:'case/jQuerynav/',title:'jQuery带来导航点击伸缩特效，任何一种方式都可以实现特效',author:'彩虹',desc:'jQuery实现鼠标点击导航伸缩特效'},
+	"Cs3", "彩虹", "2015.03.02", 9, 10,{root:'case/css3xuanzhuan/',title:'css360度旋转',author:'彩虹',desc:'css3  360度旋转，同时放大改变内容样式的动画特效.'},
+	"Cs3", "彩虹", "2015.03.02", 10, 10,{root:'case/css3nav/',title:'css3制作动画导航',author:'彩虹',desc:'css3 实现导航点击伸缩特效，不需要js，jq的动画特效。'},
+	"Js", "彩虹", "2015.03.04", 11, 10,{root:'case/jQueryxuanzhe/',title:'jQuery实现鼠标选择动画特效',author:'彩虹',desc:'jQuery实现默认选中与鼠标离开隐藏特效'},
+	"Cs3", "彩虹", "2015.03.05", 12, 10,{root:'case/css3fangda/',title:'css3鼠标划过放大内容',author:'彩虹',desc:'css3鼠标划过整体放大，文字隐藏与出现特效'},
+	"Cs3", "彩虹", "2015.03.21", 13, 10,{root:'case/css3xuanzhuan1/',title:'css3鼠标划过旋转',author:'彩虹',desc:'css3鼠标划过旋转内容同时放大特效'},
+	"Cs3", "彩虹", "2015.03.20", 14, 10,{root:'case/css3ly/',title:'css3落隐落现',author:'彩虹',desc:'css3鼠标划过内容由内外慢慢放大特效'},
+	"Js", "彩虹", "2015.01.15", 15, 10,{root:'case/jsxxk/',title:'jQuery选项卡',author:'彩虹',desc:'用jQ实现选项开网页特效'},
+	"Cs3", "彩虹", "2015.01.17", 16, 10,{root:'case/css3xz2/',title:'css3实现鼠标特效',author:'彩虹',desc:'css3实现动画特效，鼠标划过显示不一样的酷炫动画'},
+	"Cs3", "彩虹", "2015.01.20", 17, 10,{root:'case/css3jd/',title:'css3实现京东图片展示',author:'彩虹',desc:'css3实现商品图片动画特效'},
+	"Cs3", "彩虹", "2015.03.19", 18, 10,{root:'case/css3donghua/',title:'css3实现内容位置变化',author:'彩虹',desc:'css3实现文字图片位置变化缩小动画'},
+	"Cs3", "彩虹", "2015.01.22", 4, 7,{root:'case/css3baidu/',title:'css3实现百度图片首页',author:'彩虹',desc:'css3实现百度图片首页缩放动画效果'},
+	"Cs3", "彩虹", "2015.01.27", 5, 7,{root:'case/css3daoh/',title:'css3实现导航手风琴',author:'彩虹',desc:'css3实现不同风格的导航特效，别样的导航展示特效'},
+	"Js", "彩虹", "2015.01.08", 6, 7,{root:'case/jsbaidunva/',title:'jQuery实现百度导航',author:'彩虹',desc:'jQuery实现百度搜索页面导航特效'},
+	"Js", "彩虹", "2015.02.14", 7, 7,{root:'case/jstup/',title:'jQuery实现焦点图',author:'彩虹',desc:'jQuery实现鼠标点击图片滚动特效，每点击图片达到最后一张，马上返回'},
+	"Js", "彩虹", "2015.02.16", 8, 7,{root:'case/jsqiyeav/',title:'jQuery大型企业导航',author:'彩虹',desc:'jQuery实现大型企业导航产品展示特效，鼠标点击出现相应标题内容。'},
+	"Js", "彩虹", "2015.03.16", 9, 7,{root:'case/jsqqxf/',title:'jQueryQQ悬浮',author:'彩虹',desc:'jQuery实现qq悬浮，点击出现多种qq联系方式'},
+	"Js", "彩虹", "2015.03.18", 10, 7,{root:'case/jsctnav/',title:'jQuery抽屉式导航',author:'彩虹',desc:'jQuery实现鼠标点击横向展示相应内容，实现抽屉是特效'},
+	"Js", "彩虹", "2015.03.19", 11, 7,{root:'case/leftnav/',title:'jQueryonlylady左侧导航',author:'彩虹',desc:'jQuery实现onlylady左侧导航特效，点击悬浮按钮切换相应内容。'},
+	"Js", "彩虹", "2015.03.22", 12, 7,{root:'case/mgnav/',title:'jQuery蘑菇导航',author:'彩虹',desc:'jQuery实现蘑菇街导航特效'},
+	"Js", "彩虹", "2015.03.10", 13, 7,{root:'case/pptvnav/',title:'jQuery 鼠标划过缓慢出现',author:'彩虹',desc:'jQuery实现鼠标划过缓慢出现导航内容，同时切换内容'},
+	"Cs3", "Flerovium", "(289)", 14, 7,{root:'case/shop_Page/',title:'淘宝内页产品旋转动画',author:'零曦',desc:'纯纯的css3实现淘宝内页产品旋转动画'},
+	"Cs3", "Ununpentium", "(288)", 15, 7,{root:'case/timing_Banner2/',title:'定时banner动画',author:'零曦',desc:'纯纯的css3实现定时banner动画'},
+	"Cs3", "Livermorium", "(293)", 16, 7,{root:'case/sudoku_Animation/',title:'九宫格动画',author:'零曦',desc:'纯纯的css3实现九宫格动画'},
+	"Cs3", "零曦", "2015.01.26", 3,3,{root:'case/Jumei_Youpin/',title:'聚美优品之小美来了',author:'零曦',desc:'纯纯的css3实现小美来了'},
+	"Cs3", "零曦", "2015.01.27", 4,3,{root:'case/good_Start/',title:'开门红',author:'零曦',desc:'纯纯的css3实现开门红动画'},
+	"Cs3", "零曦", "2015.01.28", 4,5,{root:'case/difference/',title:'时间差',author:'零曦',desc:'纯纯的css3实现时间差动画'}
+	
+];
+
+</script>
+<script type="text/javascript" src="js/case.js"></script>
+</body>
 </html>
